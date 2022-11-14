@@ -1,2 +1,2 @@
-num = int(input('number: '))
-print(sum(map(int, str(num))))
+num = (input('number: '))
+print(sum(map(int, num.replace('.', '').replace('-', ''))))
