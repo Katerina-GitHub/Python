@@ -1,9 +1,4 @@
-import logger
-
-
-def main():
-    logger.write_txt()
-
+from ui import click
 
 if __name__ == '__main__':
-    main()
+    click()

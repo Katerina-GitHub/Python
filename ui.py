@@ -1,12 +1,15 @@
-def get_person():
-    person = []
-    sirname = input('Введите фамилию: ')
-    person.append(sirname)
-    name = input('Введите имя: ')
-    person.append(name)
-    phone_number = input('Введите номер телефона: ')
-    phone_number = int(phone_number)
-    person.append(phone_number)
-    description = input('Введите описание: ')
-    person.append(description)
-    return
+from dataProvider import get_person
+from logger import write_txt, write_csv, read_contact
+
+
+def click():
+    print('1.Add a new contact\n2.Show phonebook')
+    mode = int(input())
+    if mode == 1:
+        a = get_person()
+        write_txt(a)
+        write_csv(a)
+    elif mode == 2:
+        print(read_contact())
+    else:
+        print('Enter correct data')
